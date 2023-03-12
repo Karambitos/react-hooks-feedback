@@ -13,3 +13,42 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.main{
+  padding: 100px 40px;
+  max-width: 400px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.good,
+.neutral,
+.bad {
+  position: relative;
+
+
+}
+
+.good:before,
+.neutral:before,
+.bad:before{
+    content: '';
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    top: calc(50% - 5px);
+    left: -15px;
+    display: block;
+}
+
+.good:before {
+  background-color: #00C853;
+}
+
+.neutral:before {
+  background-color: #FFC107;
+}
+
+.bad:before {
+  background-color: #D32F2F;
+}
