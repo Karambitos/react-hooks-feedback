@@ -11,8 +11,6 @@ export default function Feedback() {
     bad: 0,
   });
 
-  const { good, neutral, bad } = feedbackState;
-
   const countTotalFeedback = () => {
     return Object.values(feedbackState).reduce((acc, value) => {
       acc += value;
@@ -47,9 +45,6 @@ export default function Feedback() {
           <Graph options={feedbackState} />
           <FeedbackStatistics
             state={feedbackState}
-            good={good}
-            neutral={neutral}
-            bad={bad}
             total={countTotalFeedback()}
             positivePercentage={countPositiveFeedbackPercentage()}
           />
